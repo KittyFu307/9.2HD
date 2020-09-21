@@ -1,0 +1,33 @@
+.hd{
+    font-size: 25px;
+    background-position: center; 
+    background-color: darkgray;
+    display: flex;
+}
+ul{
+    display: inline;
+    padding-top: 10px;
+    flex:50%
+}
+li{
+ display: inline;
+ padding-left:10px;
+ padding-right:20px;
+}
+p{
+    padding-left: 30px;
+    flex:10%;
+    padding-top: 30px;
+    font-weight: bolder;
+    font-size: larger;
+}
+button{
+    flex: 10%;
+    font-size: large;
+}
+.cm{
+    display: flex
+}
+.item{
+    flex:20%
+}

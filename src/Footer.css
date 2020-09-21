@@ -1,0 +1,33 @@
+.total{
+    display: flex;
+    background-position: center; 
+    
+}
+.pic{
+    width: 15%;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.left{
+    flex:65%;
+    margin-right: 20px;
+    background-color: darkgray;
+    text-align: center;
+    display: flex;
+}
+.right{
+    flex:30%;
+    background-color: darkgray;
+    text-align: center;
+    display: flex;
+}
+p{
+    display: inline;
+    flex:20%
+}
+.input{
+    display: inline;
+    flex:20%;
+    padding-top: 30px;
+}
