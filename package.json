@@ -29,6 +29,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild":"cd my-page && npm intall && npm run build",
     "start":"node server.js"
   },
   "repository": {
