@@ -39,13 +39,7 @@ io.on('connection',socket =>{
       })
 }) 
 
-if(process.env.NODE_ENV==='production'){
-    app.use(express.static('my-page/build'));
 
-    app.get('*',(req,res) =>{
-        res.sendFile(path.join(__dirname,'my-page/build','index.html'));
-    });
-}
 let port = process.env.PORT;
 if(port == null || port == ""){
     port = 8080;
