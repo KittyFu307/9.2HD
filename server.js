@@ -4,15 +4,16 @@ const Speech = require('./models/Speech')
 const Color = require('./models/Color')
 const mongoose = require("mongoose")
 const cors = require("cors")
+const { IFFT } = require('@tensorflow/tfjs')
 const app = express()
 const http = require('http').createServer(app)
 const io = require('socket.io')(http)
-
+const path = require('path')
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors())
 app.use(bodyParser.json())
 
-mongoose.connect("mongodb+srv://admin-kitty:Deakin2020@cluster0.pzwde.mongodb.net/Speech?retryWrites=true&w=majority", {useNewUrlParser: true ,useUnifiedTopology:true})
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://admin-kitty:Deakin2020@cluster0.pzwde.mongodb.net/Speech?retryWrites=true&w=majority", {useNewUrlParser: true ,useUnifiedTopology:true})
 app.post('/speech',(req,res)=>{
     const speech = new Speech({
         Text:req.body.Text
@@ -38,6 +39,13 @@ io.on('connection',socket =>{
       })
 }) 
 
+if(process.env.NODE_ENV==='production'){
+    app.use(express.static('my-page/build'));
+
+    app.get('*',(req,res) =>{
+        res.sendFile(path.join(__dirname,'my-page','build','index.html'));
+    });
+}
 let port = process.env.PORT;
 if(port == null || port == ""){
     port = 8080;
