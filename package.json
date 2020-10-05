@@ -1,0 +1,43 @@
+{
+  "name": "9.1p",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@tensorflow-models/mobilenet": "^2.0.4",
+    "@tensorflow/tfjs": "^2.4.0",
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "fs": "0.0.1-security",
+    "get-image-data": "^5.0.0",
+    "gtts": "^0.2.1",
+    "gtts.js": "^1.0.1",
+    "http": "0.0.1-security",
+    "ibm-watson": "^5.7.0",
+    "init": "^0.1.2",
+    "mongoose": "^5.10.7",
+    "multer": "^1.4.2",
+    "path": "^0.12.7",
+    "socket.io": "^2.3.0",
+    "socketio": "^1.0.0",
+    "watson-developer-cloud": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KittyFu307/Task9.1ShikunFu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KittyFu307/Task9.1ShikunFu/issues"
+  },
+  "homepage": "https://github.com/KittyFu307/Task9.1ShikunFu#readme"
+}
