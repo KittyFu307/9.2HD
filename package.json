@@ -29,13 +29,18 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild":"cd my-page && npm insatll && npm run build"
+    "heroku-postbuild":"cd my-page && npm install --only=dev && npm install && npm run build",
+    "start":"node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KittyFu307/Task9.1ShikunFu.git"
   },
   "author": "",
+  "engines": {
+    "node": "12.18.3",
+    "npm": "6.14.6"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KittyFu307/Task9.1ShikunFu/issues"
